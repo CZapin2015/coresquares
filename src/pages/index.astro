@@ -2,31 +2,67 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
-<!doctype html>
 <html lang="en">
   <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <BaseHead title="CoreSquares - Chess from the Core" description="Real chess improvement through fundamentals and game reviews." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <style>
+      body {
+        margin: 0;
+        font-family: system-ui, sans-serif;
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+      }
+
+      main {
+        padding: 4rem 2rem;
+        max-width: 800px;
+        margin: auto;
+      }
+
+      .logo {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+
+      .tagline {
+        font-size: 1.25rem;
+        margin-bottom: 3rem;
+      }
+
+      .cta-button {
+        display: block;
+        margin: 1rem auto;
+        padding: 1.2rem 2rem;
+        font-size: 1.1rem;
+        font-weight: bold;
+        background: #fff;
+        color: #000;
+        text-decoration: none;
+        border-radius: 6px;
+        width: 280px;
+        transition: all 0.2s ease-in-out;
+      }
+
+      .cta-button:hover {
+        background: #ddd;
+      }
+    </style>
   </head>
+
   <body>
     <Header />
-    <main style="max-width: 600px; margin: 2rem auto; padding: 0 1rem;">
-      <h1>♟️ Welcome to CoreSquares</h1>
-      <p>Your tactical edge in chess improvement.</p>
-      <p>CoreSquares offers:</p>
-      <ul>
-        <li>Private lessons tailored to your level</li>
-        <li>In‑depth tactics analysis</li>
-        <li>Quick video tutorials and live streams</li>
-      </ul>
-      <p>
-        Ready to sharpen your skills? 
-        <a href="https://calendly.com/coreyzapin/coaching">Book a lesson</a> 
-        or 
-        <a href="http://www.youtube.com/@CoreyZapin">subscribe on YouTube</a>.
-      </p>
+    <main>
+      <div class="logo">#CoreSquares</div>
+      <div class="tagline">Chess from the Core. No gimmicks. Just fundamentals.</div>
+
+      <a class="cta-button" href="https://youtube.com/@CoreSquares" target="_blank">Subscribe to YouTube</a>
+      <a class="cta-button" href="https://calendly.com/coresquares" target="_blank">Book a Lesson</a>
+      <a class="cta-button" href="/services#membership">Join CoreSquares+</a>
     </main>
     <Footer />
   </body>
