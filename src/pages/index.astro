@@ -1,61 +1,74 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 ---
 
 <html lang="en">
   <head>
-    <BaseHead title="CoreSquares - Chess from the Core" description="Real chess improvement through fundamentals and game reviews." />
+    <BaseHead title="CoreSquares - Chess from the Core" description="Chess lessons, fundamentals, game reviews, and more." />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <style>
+      * {
+        box-sizing: border-box;
+      }
+
       body {
         margin: 0;
-        font-family: system-ui, sans-serif;
-        background-color: #000;
+        padding: 0;
+        background: #000;
         color: #fff;
-        text-align: center;
+        font-family: system-ui, sans-serif;
       }
 
       main {
-        padding: 4rem 2rem;
-        max-width: 800px;
-        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 100vh;
+        padding: 2rem;
       }
 
       .logo {
-        font-size: 3rem;
+        font-size: 2.5rem;
         font-weight: bold;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
       }
 
       .tagline {
-        font-size: 1.25rem;
-        margin-bottom: 3rem;
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+        max-width: 90%;
       }
 
       .cta-button {
         display: block;
-        margin: 1rem auto;
-        padding: 1.2rem 2rem;
-        font-size: 1.1rem;
+        width: 100%;
+        max-width: 300px;
+        padding: 1rem;
+        margin: 0.75rem 0;
+        font-size: 1rem;
         font-weight: bold;
-        background: #fff;
+        background-color: #fff;
         color: #000;
         text-decoration: none;
         border-radius: 6px;
-        width: 280px;
-        transition: all 0.2s ease-in-out;
+        transition: background 0.2s ease-in-out;
       }
 
       .cta-button:hover {
-        background: #ddd;
+        background-color: #ddd;
+      }
+
+      footer {
+        text-align: center;
+        color: #666;
+        font-size: 0.8rem;
+        padding: 1rem 0;
       }
     </style>
   </head>
-
   <body>
-    <Header />
     <main>
       <div class="logo">#CoreSquares</div>
       <div class="tagline">Chess from the Core. No gimmicks. Just fundamentals.</div>
@@ -64,6 +77,9 @@ import Footer from '../components/Footer.astro';
       <a class="cta-button" href="https://calendly.com/coresquares" target="_blank">Book a Lesson</a>
       <a class="cta-button" href="/services#membership">Join CoreSquares+</a>
     </main>
-    <Footer />
+
+    <footer>
+      &copy; 2025 CoreSquares. All rights reserved.
+    </footer>
   </body>
 </html>
