@@ -1,0 +1,28 @@
+<header style="background:#fff;border-bottom:1px solid #e5e5e5;">
+  <div style="max-width:900px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:1rem;">
+    <a href="/" style="display:flex;align-items:center;text-decoration:none;color:#000;font-weight:bold;font-size:1.25rem;">
+      <img src="/logo.png" alt="#CoreSquares logo" style="height:40px;margin-right:0.5rem;">
+      CoreSquares
+    </a>
+    <button id="nav-toggle" aria-label="Toggle menu"
+      onclick="document.body.classList.toggle('menu-open')"
+      style="background:none;border:none;font-size:1.5rem;">
+      ☰
+    </button>
+    <nav id="nav-links" style="display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:#fff;text-align:center;border-top:1px solid #e5e5e5;">
+      <a href="/"        style="padding:1rem;text-decoration:none;color:#000;">Home</a>
+      <a href="/about"   style="padding:1rem;text-decoration:none;color:#000;">About</a>
+      <a href="/services"style="padding:1rem;text-decoration:none;color:#000;">Services</a>
+      <a href="/contact" style="padding:1rem;text-decoration:none;color:#000;">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  body.menu-open #nav-links{display:flex;}
+  @media(min-width:600px){
+    #nav-toggle{display:none;}
+    #nav-links{display:flex !important;position:static;flex-direction:row;border:none;}
+    #nav-links a{padding:0 1rem;}
+  }
+</style>
